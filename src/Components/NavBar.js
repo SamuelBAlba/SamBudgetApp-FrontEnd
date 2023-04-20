@@ -6,6 +6,10 @@ export default function NavBar() {
         <nav>
 
         <h1>
+            <Link to="/">Home</Link>
+        </h1>
+
+        <h1>
             <Link to="/transactions">Transactions</Link>
         </h1>
 
