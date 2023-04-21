@@ -36,7 +36,7 @@ export default function TransactionDetails() {
             <p>Date: {transaction.date}</p>
 
             <Link to={`/transactions`}><button>Go back</button></Link>
-            <Link to={`transactions/${index}/edit`}><button>Edit</button></Link>
+            <Link to={`/transactions/${index}/edit`}><button>Edit</button></Link>
             <button onClick={handleDelete}>Delete</button>
             
             

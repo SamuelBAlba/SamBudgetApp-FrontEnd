@@ -31,6 +31,18 @@ export default function Transactions() {
     }
 
     const totalAmount = calculateAmount();
+  
+    function totalColor(totalAmount) {
+        let color = ''
+        if(totalAmount > 100){
+            color = 'green'
+        }else if(totalAmount >= 0 && totalAmount <= 100){
+            color = 'yellow'
+        }else {
+            color = 'red'
+        }
+        return color
+    }
 
 
 
@@ -39,7 +51,9 @@ export default function Transactions() {
             <section>
                 <table>
                     <thead>
-                        <th>Total: {totalAmount}</th>
+            
+                        <th style={{color: totalColor(totalAmount)}}>Total: {totalAmount}</th>
+                        
                     </thead>
                     <tbody>
                         {transactions.map((transaction, index) => {
