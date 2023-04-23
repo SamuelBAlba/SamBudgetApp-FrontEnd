@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import Edit from "./Pages/Edit";
+import New from "./Pages/New";
 import FourOFour from "./Pages/FourOFour";
 
 function App() {
@@ -21,12 +22,13 @@ function App() {
           <Route path="/transactions/:index" element={<Show/>}/>
           <Route path="/transactions/:index/edit" element={<Edit/>}/>
           <Route path="*" element={<FourOFour/>}/>
+          <Route path="/transactions/new" element={<New/>}/>
+
 
 
 
         </Routes>
       </main>
-
 
 
    </Router>

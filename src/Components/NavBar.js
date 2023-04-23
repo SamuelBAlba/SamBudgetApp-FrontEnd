@@ -13,9 +13,9 @@ export default function NavBar() {
             <Link to="/transactions">Transactions</Link>
         </h1>
 
-        <button>
-            New Transaction
-        </button>
+            <Link to ="/transactions/new">
+            <button>New Transaction</button>
+            </Link>
 
     </nav>
 

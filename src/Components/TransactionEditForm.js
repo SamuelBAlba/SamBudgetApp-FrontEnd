@@ -33,8 +33,8 @@ export default function TransactionEditForm() {
             }).catch((e) => console.warn("warn", e))
     }
 
-    function handleTextChange(event) {
-        setTransaction({...transaction, [event.target.id]: event.target.value})
+    async function handleTextChange(event) {
+        await setTransaction({...transaction, [event.target.id]: event.target.value})
     }
 
     function handleSubmit(event) {
@@ -46,9 +46,9 @@ export default function TransactionEditForm() {
         <div className="Edit">
             <form onSubmit={handleSubmit}>
                 
-                <label htmlFor="item">Item:</label>
+                <label htmlFor="itemName">Item:</label>
                 <input
-                id="item"
+                id="itemName"
                 value={transaction.itemName}
                 type="text"
                 onChange={handleTextChange}
