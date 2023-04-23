@@ -43,14 +43,22 @@ export default function TransactionsNewForm() {
         <div>
             <form onSubmit={handleSubmit}>
             <label htmlFor="itemName">Item:</label>
-                <input
+            <select onChange={handleTextChange}>
+                <option>Direct diposit </option>
+                <option>Phone Bill </option>
+                <option>Groceries </option>
+                <option>Subscription </option>
+            </select>
+            <br/>
+
+                {/* <input
                 id="itemName"
                 value={transaction.itemName}
                 type="text"
                 onChange={handleTextChange}
                 placeholder="Name of Transaction"
                 required
-                />
+                /> */}
 
                 <label htmlFor="amount">Amount:</label>
                 <input
